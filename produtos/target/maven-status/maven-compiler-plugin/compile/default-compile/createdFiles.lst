@@ -1,0 +1,13 @@
+br\com\empresa\service\ProdutoService.class
+br\com\empresa\service\HelloService.class
+br\com\empresa\Dto\ProdutoDto.class
+br\com\empresa\DaoImpl\CategoriaDaoImpl.class
+br\com\empresa\DaoImpl\ProdutoDaoImpl.class
+br\com\empresa\service\CategoriaService.class
+br\com\empresa\Model\Categoria.class
+br\com\empresa\Dao\ICategoriaDao.class
+br\com\empresa\Dao\IProdutoDao.class
+br\com\empresa\Utils\Util.class
+br\com\empresa\EntityManager\JPAEntityManager.class
+br\com\empresa\applicationConfig\MyApplication.class
+br\com\empresa\Model\Produto.class
