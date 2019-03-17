@@ -56,16 +56,13 @@ public class ProdutoDaoImpl implements IProdutoDao {
 		}
 	}
 
-	public List<Produto> getProduto(int id) {
-		try {
-			String query = " select p from Produto p "
-						  + " join p.categoria "
-						  + " where p.id = :id ";
+	public Produto getProduto(int id) {
+		try {						  
+			TypedQuery<Produto> qry = em.createQuery("from Produto p where p.id=:id", Produto.class);
+			qry.setParameter("id", id);							
+			Produto achouProduto = qry.getSingleResult();
 			
-			TypedQuery<Produto> qry = em.createQuery(query, Produto.class).setParameter("id", id);
-			List<Produto> achouProduto = qry.getResultList();
-			
-				if(!achouProduto.isEmpty())
+				if(achouProduto != null)
 					return achouProduto;
 				else
 					return null;

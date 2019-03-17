@@ -3,6 +3,7 @@ package br.com.empresa.service;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -12,12 +13,15 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.sun.research.ws.wadl.Application;
+
 import br.com.empresa.DaoImpl.ProdutoDaoImpl;
 import br.com.empresa.Model.Produto;
 
 
 @Path("/produto")
 @Produces(MediaType.APPLICATION_JSON)
+//@Consumes("application/json")
 public class ProdutoService {
 	
 	@Inject
@@ -49,7 +53,7 @@ public class ProdutoService {
 	
 	@GET
 	@Path("/recuperaProduto/{id}")
-	public List<Produto> getProduto( @PathParam("id") int id) {
+	public Produto getProduto( @PathParam("id") int id) {
 		return prodDaoImpl.getProduto(id);
 	}
 	

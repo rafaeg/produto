@@ -42,13 +42,9 @@ public class EmpresaTeste {
 		produtos.add(prod2);
 		produtos.add(prod3);
 		
-		categoria.setProdutos(produtos);
+		//categoria.setProdutos(produtos);
 		
 		new CategoriaDaoImpl().salvarCategoria(categoria);
-		
-		
-		
-		
 		
 	}
 	

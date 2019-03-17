@@ -1,0 +1,4 @@
+127.0.0.1 - - [13/Mar/2019:22:54:17 -0300] "GET /produtos/rest/categoria/listar HTTP/1.1" 200 62 http-bio-8080-exec-1 3520
+127.0.0.1 - - [13/Mar/2019:22:54:31 -0300] "GET /produtos/rest/produto/listar HTTP/1.1" 200 539 http-bio-8080-exec-2 103
+127.0.0.1 - - [13/Mar/2019:22:57:28 -0300] "GET /produtos/rest/produto/recuperaProduto/2 HTTP/1.1" 200 182 http-bio-8080-exec-1 3508
+127.0.0.1 - - [13/Mar/2019:22:57:40 -0300] "GET /produtos/rest/produto/recuperaProduto/3 HTTP/1.1" 200 179 http-bio-8080-exec-2 102

@@ -6,9 +6,8 @@
     
     <persistence-unit name="empresa" transaction-type="RESOURCE_LOCAL">
         
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <!-- <provider>org.hibernate.ejb.HibernatePersistence</provider> -->
-        
+       <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+               
         <class>br.com.empresa.Model.Produto</class>
         <class>br.com.empresa.Model.Categoria</class>
         

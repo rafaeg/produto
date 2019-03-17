@@ -6,10 +6,9 @@ import javax.persistence.Persistence;
 
 public class JPAEntityManager {
 	
-	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("empresa");
-	private EntityManager em = factory.createEntityManager();
-	
 	public EntityManager getEntityManager() {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("empresa");
+		EntityManager em = factory.createEntityManager();
 		return em;
 	}
 	

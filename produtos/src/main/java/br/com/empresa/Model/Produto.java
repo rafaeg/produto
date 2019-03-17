@@ -24,7 +24,7 @@ public class Produto implements Serializable {
 
 	@Id
 	@Column(name="id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(name="codigoBarras")
@@ -39,11 +39,8 @@ public class Produto implements Serializable {
 	@Column(name="quantidade")
 	private int quantidade;
 	
-	@XmlTransient
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="categoria_id", 
-				referencedColumnName="id",
-				nullable = false)
+	@ManyToOne
+	@JoinColumn(name="categoria_id")
 	private Categoria categoria;
 	
 	public Produto() {
@@ -118,14 +115,6 @@ public class Produto implements Serializable {
 	public String toString() {
 		return "Produto [id=" + id + ", codigoBarra=" + codigoBarras + ", nome=" + nome + ", descricao=" + descricao
 				+ ", quantidade=" + quantidade + "]";
-	}
 
-	/*
-	public Object onCycleDetected(Context context) {
-		System.out.println( getClass().getName() + "  Detectou ciclo  "  );
-        Produto p = new Produto();
-        p.setId(this.id);
-        return p;
 	}
-	*/
 }
