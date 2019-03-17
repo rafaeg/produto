@@ -21,7 +21,6 @@ import br.com.empresa.Model.Produto;
 
 @Path("/produto")
 @Produces(MediaType.APPLICATION_JSON)
-//@Consumes("application/json")
 public class ProdutoService {
 	
 	@Inject

@@ -1,0 +1,18 @@
+	
+<div class="container">
+
+	<form role="form" name="form1"> 
+		<div class="form-group">
+			<p>Welcome : {{user.mail}}</p>
+			<label for="exampleInputEmail">Mail</label>
+			<input type="text" placeholder="Entre name" class=" form-control" required ng-model="user.mail"/>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword">Password</label>
+			<input type="password" placeholder="Password" class="form-control" id="exampleInputPassword" required ng-model="user.pass"/>
+		</div>
+		<button type="submit" class="btn btn-default" ng-disabled="form1.$invalid" ng-click="login(user)">Submit</button>
+		<p>{{msgText}}</p>
+	</form>
+
+</div>

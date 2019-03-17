@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="produtoApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start Bootstrap - SB Admin Version 2.0 Demo</title>
+
+    <!-- Core CSS - Include with every page -->
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Page-Level Plugin CSS - Dashboard -->
+    <link href="resources/css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="resources/css/plugins/timeline/timeline.css" rel="stylesheet">
+
+    <!-- SB Admin CSS - Include with every page -->
+    <link href="resources/css/sb-admin.css" rel="stylesheet">
+	
+	<script src="resources/lib/angular.min.js"></script>
+	
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            
+            <div class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                                                   
+                        <li>
+                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Produtos<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="views/blank.html">Listar </a>
+                                </li>
+                                <li>
+                                    <a href="/produtoCadastro">Cadastrar </a>
+                               </li>                         
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Categoria<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="views/blank.html">Listar</a>
+                                </li>
+                                <li>
+                                    <a href="/categoriaCadastro">Cadastrar</a>
+                               </li>                         
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                                         
+                    </ul>
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+       		
+       		<div class="row">
+       			<div class="col-lg-12">
+                    <!-- Aqui entra as páginas html -->
+                    
+				        <label>Name:</label>
+				        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+				        <hr>
+				        <h1>Hello {{yourName}}!</h1>
+				        
+				        <div ng-view></div>
+				        
+                </div>
+           </div>
+       		
+       		
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Core Scripts - Include with every page -->
+    <script src="resources/js/jquery-1.10.2.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+    <!-- Page-Level Plugin Scripts - Dashboard -->
+    <script src="resources/js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="resources/js/plugins/morris/morris.js"></script>
+
+    <!-- SB Admin Scripts - Include with every page -->
+    <script src="resources/js/sb-admin.js"></script>
+
+    <!-- Page-Level Demo Scripts - Dashboard - Use for reference -->
+    <script src="resources/js/demo/dashboard-demo.js"></script>
+	
+	<!-- Arquivos ArngularJS -->
+	<script src="resources/js/app.js"></script>
+	<script src="resources/lib/angular-route.js"></script>
+	<script src="resources/js/directive/categoriaCadastroDirective.js"></script>
+	<script src="resources/js/controllers/CategoriaController.js"></script>
+</body>
+
+</html>
